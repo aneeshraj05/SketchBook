@@ -16,7 +16,7 @@ import {
 
 export const tools = [
   { id: "lock", icon: Lock },
-  { id: "hand", icon: Hand },
+
   { id: "select", icon: MousePointer2 },
   { id: "rectangle", icon: Square },
   { id: "diamond", icon: Diamond },
@@ -25,7 +25,6 @@ export const tools = [
   { id: "line", icon: Minus },
   { id: "pencil", icon: Pencil },
   { id: "text", icon: Type },
-  { id: "image", icon: Image },
   { id: "eraser", icon: Eraser },
-  { id: "library", icon: Shapes },
+ 
 ];

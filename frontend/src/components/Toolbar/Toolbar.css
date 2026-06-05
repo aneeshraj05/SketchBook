@@ -1,22 +1,17 @@
 .toolbar {
   position: fixed;
-
   top: 20px;
   left: 50%;
-
   transform: translateX(-50%);
 
   display: flex;
   gap: 8px;
-
   padding: 4px;
 
   background: white;
-
   border-radius: 12px;
 
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   z-index: 999;
 }
@@ -26,11 +21,9 @@
   height: 40px;
 
   border: none;
-
   border-radius: 8px;
 
   background: transparent;
-
   cursor: pointer;
 
   display: flex;
@@ -44,4 +37,19 @@
 
 .tool-btn.active {
   background: #e8e8e8;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .toolbar {
+    top: 80px;
+    left: unset !important;
+    right: 190px !important;
+
+    transform: none !important;
+
+    flex-direction: column;
+
+    width: fit-content;
+  }
 }

@@ -1,0 +1,244 @@
+/* --- MAIN PANEL WRAPPER --- */
+.properties-panel {
+  position: fixed;
+  top: 65px;
+  left: 12px;
+  width: 180px; /* Kept your exact panel layout size intact */
+  background: #ffffff;
+  border: 1px solid #eef0f3;
+  border-radius: 12px;
+  padding: 14px; /* Unifies padding all around */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Unified layout section gap spacing */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* --- SECTIONS & HEADERS --- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Consistent inner element gap spacing across all panels */
+}
+
+.section h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #55555a;
+  letter-spacing: -0.01em;
+}
+
+.section-header-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value-badge {
+  font-size: 10px;
+  background: #ececf1;
+  color: #434349;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* --- COMPONENT BUTTON ROWS --- */
+.color-row,
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px; /* Perfect spacing row-by-row */
+  width: 100%;
+}
+
+/* --- SEAMLESS SEGMENTED BUTTON CONTAINER --- */
+/* Formats Stroke Width, Font Family, Align, and Grid Style into pristine unified inline pills */
+.option-row.text-options {
+  background: #f0f0f4;
+  padding: 3px;
+  border-radius: 8px;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 2px;
+  box-sizing: border-box;
+}
+
+/* --- REUSABLE CONTROL BUTTONS --- */
+.color-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+  box-sizing: border-box;
+}
+
+.color-btn:hover {
+  transform: scale(1.06);
+}
+
+.color-btn.active {
+  outline: 2px solid #8b5cf6; /* Match your beautiful violet slider theme accent */
+  outline-offset: 1.5px;
+  transform: scale(1.06);
+}
+
+/* Custom Picker Button Overrides */
+.custom-picker-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px dashed #b5b5be;
+  position: relative;
+}
+
+/* Base Form Buttons */
+.option-btn {
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #f0f0f4;
+  color: #1a1a1e;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Automatically evens out width size across rows */
+}
+
+.option-btn:hover {
+  background: #e4e4eb;
+}
+
+.option-btn.selected {
+  background: #e0daff;
+  color: #6d28d9;
+}
+
+/* --- SEGMENTED OPTION OVERRIDES --- */
+/* Overrides standard isolated buttons when wrapped inside an option-row background pill container */
+.text-options .option-btn {
+  background: transparent;
+  border-radius: 5px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.text-options .option-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.text-options .option-btn.selected {
+  background: #ffffff;
+  color: #2e08a6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- STROKE STYLE BUTTON REGIONS --- */
+.stroke-type-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 100%;
+}
+
+.stroke-style-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 32px !important; /* Perfect standard grid size balance */
+  padding: 0 !important;
+}
+
+.line-preview {
+  width: 18px;
+  height: 0px;
+  border-bottom: 2px solid #1f1f1f;
+  display: block;
+}
+
+.line-preview.dashed {
+  border-bottom: 2px dashed #1f1f1f;
+}
+
+.line-preview.dotted {
+  border-bottom: 2px dotted #1f1f1f;
+}
+
+.btn-label-text {
+  display: none; /* Hides extra messy labels to maintain Excalidraw's clean layout aesthetics */
+}
+
+/* --- INPUT SLIDERS & RANGE RULERS --- */
+.property-slider {
+  width: 100%;
+  margin: 4px 0 0 0;
+  cursor: pointer;
+  accent-color: #a855f7; /* Matching violet slider tone from the image layout */
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 500;
+  color: #88888f;
+  margin-top: -2px;
+}
+
+/* --- COLOR REFS --- */
+.color-btn.black { background: #1f1f1f; }
+.color-btn.red { background: #e03131; }
+.color-btn.green { background: #2f9e44; }
+.color-btn.blue { background: #1971c2; }
+.color-btn.orange { background: #f08c00; }
+.color-btn.dark { background: #212529; }
+
+.color-btn.white {
+  background: #ffffff;
+  border: 1px solid #dcdce2;
+}
+.color-btn.pink { background: #f8d7da; }
+.color-btn.light-green { background: #b7e4c7; }
+.color-btn.light-blue { background: #b6d4fe; }
+.color-btn.yellow { background: #f9e79f; }
+.color-btn.transparent {
+  border: 1px solid #dcdce2;
+  background:
+    linear-gradient(45deg, #e4e4eb 25%, transparent 25%),
+    linear-gradient(-45deg, #e4e4eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e4e4eb 75%),
+    linear-gradient(-45deg, transparent 75%, #e4e4eb 75%);
+  background-size: 8px 8px;
+}
+
+/* Utilities */
+.hidden-color-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 800px) {
+  .properties-panel {
+    display: none !important;
+  }
+}

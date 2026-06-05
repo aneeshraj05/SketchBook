@@ -22,7 +22,7 @@ const Toolbar = ({
               setActiveTool(tool.id)
             }
           >
-            <Icon size={18} />
+            <Icon size={18} strokeWidth={1.2} />
           </button>
         );
       })}
