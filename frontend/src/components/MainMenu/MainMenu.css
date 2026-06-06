@@ -126,8 +126,3 @@
   border: 2px solid #4c8bf5;
 }
 
-@media screen and (max-width: 700px) {
-  .menu-dropdown-panel {
-   opacity: 0;
-  }
-}
